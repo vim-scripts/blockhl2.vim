@@ -1,0 +1,28 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=681
+
+This took vimscript#104 blockhi.vim and modified it for highlight the curly brackets using primary colors ie green red blue cyan yellow pink and also allowed for coloring the leading spaces (ie begin of line to first non spaces) instead of the whole code block between curly brackets. 
+
+I didn't like how blockhi.vim highlight the code part with background as grey.
+I wanted only the leading spaces hilighted.
+Also added filetype and load checking just to be realy safe.
+Added cpp cluster group for cpp files.
+
+It has two main functions:
+HilightBrackets() truns on hilighting and hilight.
+NoHilightBracktes() turns off hilighting clears syntax
+has two toggle function with cab to run
+toghib toggles the block hilighting on or off
+toghibs toggles the leading space hilighting on or off but does not toggle block hilighting it self.
+Colors cycle over if bracket level is more then Curly region were defined.
+
+If you what more levels (it only has 6 right now) you can change by adding more bracket and lsp matches and more cCurly regions.
+Just remember to have last bracket# set as hi bracket# guifg=NONE
+and lsp# set  hi lsp# guibg=NONE were # is the one past highest color level.
+This make sure you don't have all leading spaces in file hilighted all the time.
+
+I have a way to highlight only the block your in, using a modified vimscript#626 ShowPairs.vim
+But it not quite there yet.
+I will mostly merge it in with this script since it uses some of this scripts members.
+Coming soon.
+
+
